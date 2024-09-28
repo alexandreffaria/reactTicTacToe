@@ -28,12 +28,9 @@ export function Game() {
     return (
       <li key={move}>
         {isLatestMove ? (
-          <p>Move # {move}</p>
+          <p className="isLatestMove">Move # {move}</p>
         ) : (
-          <button
-            onClick={() => jumpTo(move)}
-            style={{ backgroundColor: "goldenrod", borderRadius: "5px" }}
-          >
+          <button onClick={() => jumpTo(move)} className="button">
             {description}
           </button>
         )}
